@@ -1,6 +1,6 @@
 ﻿namespace COMP123_S2019_Lab10_301044113
 {
-    partial class MainForm
+    partial class StartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainFormLabel = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // MainFormLabel
+            // SplashTimer
             // 
-            this.MainFormLabel.AutoSize = true;
-            this.MainFormLabel.Location = new System.Drawing.Point(261, 21);
-            this.MainFormLabel.Name = "MainFormLabel";
-            this.MainFormLabel.Size = new System.Drawing.Size(239, 31);
-            this.MainFormLabel.TabIndex = 0;
-            this.MainFormLabel.Text = "Welcome to Main Form";
+            this.SplashTimer.Interval = 3000;
+            this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
-            // MainForm
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.MainFormLabel);
+            this.ControlBox = false;
             this.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.Name = "MainForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Name = "StartForm";
+            this.Opacity = 0.8D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "StartForm";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label MainFormLabel;
+        private System.Windows.Forms.Timer SplashTimer;
     }
 }
-

@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_Lab10_301044113
 {
-    public partial class MainForm : Form
+    public partial class StartForm : Form
     {
-        public MainForm()
+        public StartForm()
         {
             InitializeComponent();
         }
-        MainForm mainForm = new MainForm();
-       
 
+        private void SplashTimer_Tick(object sender, EventArgs e)
+        {
+            SplashTimer.Enabled = false;
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            SplashTimer.Enabled = true;
+        }
     }
 }
